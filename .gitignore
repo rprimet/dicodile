@@ -20,3 +20,6 @@ __pycache__
 
 # Config files
 hostfile
+
+# Sphinx
+_build
