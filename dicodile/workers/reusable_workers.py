@@ -47,7 +47,9 @@ def get_reusable_workers(n_workers=4, hostfile=None):
         # util.Finalize(None, shutdown_reusable_workers, exitpriority=20)
     else:
         if _workers.n_workers != n_workers:
-            warnings.warn(f"Should not require different number of workers (expected: {_workers.n_workers}, required: {n_workers})")
+            warnings.warn("Should not require different number of workers " \
+                          f"(expected: {_workers.n_workers}," \
+                          f"required: {n_workers})")
             shutdown_reusable_workers()
             del _workers
             time.sleep(.5)
